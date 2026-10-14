@@ -1,0 +1,12 @@
+{
+  "name": "pid-mapa-free",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vlastni PID-like mapa Prahy a Stredoceskeho kraje bez placenych mapovych sluzeb.",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": {
+    "express": "^5.1.0",
+    "gtfs-realtime-bindings": "^1.0.0"
+  }
+}

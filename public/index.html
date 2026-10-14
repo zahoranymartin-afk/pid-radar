@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PID Mapa – Praha + Středočeský kraj</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">PID</div>
+      <div>
+        <h1>Mapa provozu</h1>
+        <span>Praha + Středočeský kraj</span>
+      </div>
+    </div>
+    <div class="tools">
+      <input id="search" placeholder="Hledat linku nebo vozidlo…">
+      <select id="filter">
+        <option value="all">Všechna vozidla</option>
+        <option value="100-299">Praha 100–299</option>
+        <option value="300-899">Region 300–899</option>
+        <option value="900-999">Noční 900+</option>
+      </select>
+      <button id="locate">Moje poloha</button>
+    </div>
+  </header>
+
+  <div id="map"></div>
+
+  <aside id="panel">
+    <div class="panel-title">Provoz</div>
+    <div class="stats">
+      <div><b id="count">0</b><span>vozidel</span></div>
+      <div><b id="fresh">0</b><span>čerstvá data</span></div>
+    </div>
+    <div id="status">Načítám data…</div>
+    <div class="hint">
+      Data se obnovují přibližně každých 20 s. Vozidlo, které ze živých dat zmizí,
+      zůstává na mapě až 10 minut.
+    </div>
+  </aside>
+
+  <footer>Data: PID Open Data · Mapa: © OpenStreetMap contributors</footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
